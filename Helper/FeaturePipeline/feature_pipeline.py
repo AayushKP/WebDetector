@@ -1,20 +1,20 @@
 from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
-from FeaturePipeline.logical_helper import (
+from Helper.FeaturePipeline.logical_helper import (
     is_ip_address, count_subdomains,
     keyword_score, brand_distance,
     compute_entropy, tld_score
 )
 
-from FeaturePipeline.content_helper import(
+from Helper.FeaturePipeline.content_helper import(
     fetch_html, detect_obfuscated_js,
     detect_redirect, detect_login_form,
     count_inputs, count_passwords,
     external_links_ratio
 )
 
-from FeaturePipeline.domain_helper import (
+from Helper.FeaturePipeline.domain_helper import (
     get_domain_age, get_expiry,
     has_whois, has_dns,
     check_ssl, get_cert_duration,
